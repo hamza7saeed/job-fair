@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job fair recruiments</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn.iconscout.com/icon/free/png-256/free-job-search-1414172-1196207.png">
+<style>
+   
+</style>
+</head>
+<body>
+   
+<!-- <h1 class="head">hello</h1> -->
+    <script>
+
+       // let heading = document.body.childNodes[1];
+        //heading.id = "kkk";
+        //console.log(heading.getAttribute("class"));
+       // (heading.setAttribute("style","color"));
+
+        //console.dir(heading.attributes[2].nodeValue);
+        // body of web browser
+       // let body = document.querySelector("body")
+      // let head = document.querySelector("h1");
+      // body.appendChild(head);
+        // totrial start
+        //let heading = document.createElement("h2");
+       // heading.innerText = "    helo         "
+
+       // body.appendChild(heading);
+
+//        console.log(heading.childNodes)
+
+//let body = document.body;
+//let head = document.createElement("h1");
+//console.log(head.innerText = "Hello bahi");
+//console.log(head.textContent = "                 Hello hamza           ")
+//body.appendChild(head)
+let body = document.body;
+// body end......
+body.style.backgroundColor = '#2D3250';
+body.style.color = '#DCF2F1';
+let head = document.createElement("header");
+let h1 = document.createElement("img");
+h1.src = 'https://www.shutterstock.com/image-illustration/job-fair-pink-gold-circular-260nw-664430452.jpg';
+h1.style.height = '150px';
+h1.style.width = '1300px';
+h1.style.borderRadius = '15px';
+head.style.display='flex';
+head.style.justifyContent = 'center';
+head.style.color = '#B47B84'
+head.appendChild(h1);
+body.appendChild(head);
+// ----------------------------
+// nav bar
+let navBar = document.createElement("nav");
+navBar.style.padding = '15px';
+navBar.setAttribute("id", "navi");
+let aTag = document.createElement("a");
+aTag.setAttribute("href", "#");
+aTag.innerText = 'Home'
+let aTag1 = document.createElement("a");
+aTag1.setAttribute("href", "Clint feed-backs");
+aTag1.innerText = 'Clint feed-backs'
+let aTag2 = document.createElement("a");
+aTag2.setAttribute("href", "About");
+aTag2.innerText = 'About'
+let aTag3 = document.createElement("a");
+aTag3.setAttribute("href", "Contact");
+aTag3.innerText = 'Contact'
+
+navBar.appendChild(aTag);
+navBar.appendChild(aTag1);
+navBar.appendChild(aTag2);
+navBar.appendChild(aTag3);
+navBar.style.display = 'flex';
+navBar.style.justifyContent = 'space-evenly'
+let navbar = navBar.querySelectorAll('nav > a');
+navbar.forEach(function(select){
+    select.style.textDecoration = 'none';
+    select.style.color = '#DCF2F1';
+    select.style.boxShadow = '0px 5px 5px 10px #365486'
+});
+navbar.forEach(function(hover){
+    hover.addEventListener('mouseover',function(){
+        hover.style.color = '#C7C8CC'
+        hover.style.textDecoration = 'underline';
+
+    });
+    hover.addEventListener('mouseout',function(){
+        hover.style.textDecoration = 'none';
+        hover.style.color = '#DCF2F1'
+
+    });
+
+});
+// --------------------------------------------------
+// Search jobs
+// --------------------------------------------------
+let searchSection = document.createElement("div");
+searchSection.style.display = 'flex';
+//searchSection.style.alignItems = 'center';
+searchSection.style.justifyContent = 'center';
+searchSection.style.gap = '8px';
+
+searchSection.style.paddingTop = '10px';
+
+let searchBar = document.createElement("input");
+searchBar.setAttribute("placeHolder","👜 Enter job or Keyword");
+searchBar.style.height = '40px';
+searchBar.style.width = '30%';
+searchBar.style.borderRadius = '10px';
+searchBar.style.fontSize = '15px';
+
+
+let locationBar = document.createElement("input");
+locationBar.setAttribute("placeHolder","📍 Enter your location");
+locationBar.style.height = '40px';
+locationBar.style.borderRadius = '10px'
+locationBar.style.width = '30%';
+locationBar.style.fontSize = '15px';
+
+let searchButton = document.createElement("button");
+searchButton.innerText = '🔍 Search jobs'
+searchButton.style.height = '45px';
+searchButton.style.borderRadius = '9px'
+searchButton.style.width = '10%';
+searchButton.style.cursor = 'pointer';
+searchButton.style.fontSize = '15px';
+searchButton.addEventListener('mouseover', function(){
+    searchButton.style.backgroundColor = '#424769';
+});
+searchButton.addEventListener('mouseout', function(){
+    searchButton.style.backgroundColor = '#FFFFFF';
+});
+
+
+let allBody = document.createElement("div");
+allBody.style.display = 'flex';
+allBody.style.flexWrap = 'wrap';
+
+// --------------------------------------------------
+//      side section
+// --------------------------------------------------
+let sideSection = document.createElement("section");
+sideSection.style.display = 'flex';
+sideSection.style.flexDirection = 'row';
+let sideCard = document.createElement("artical");
+let divSection = document.createElement("div");
+let sideBar = document.createElement("form");
+sideBar.innerHTML = '<h3>Your age</h3><label for="vol">Age (between 0 and 50):</label></br><input type="range" id="vol" name="vol" min="0" max="50"></br><h3>Choose annualy Income</h3><input type = "radio" id = "ra" name = "fav" value = "one"><lable for="one"> £10,000</lable></br> <input type = "radio" id = "ra1" name = "fav" value = "two"><lable for="two">£20,000</lable></br> <input type = "radio" id = "ra2" name = "fav" value = "three"><lable for="three">£30,000</lable></br> <input type = "radio" id = "ra3" name = "fav" value = "four"><lable for="four"> £40,000</lable></br> <input type = "radio" id = "ra3" name = "fav" value = "five"><lable for="five"> £50,000</lable></br>';
+let sideBar0 = document.createElement("h3");
+sideBar0.innerText = 'Select your Qualifaction';
+let sideBar1 = document.createElement("select");
+sideBar1.innerHTML = '<option value="Select">Select...</option><option value = "Matric">Matric</option><option value = "Intermediate">Intermediate</option><option value = "Under-Graduate">Under-Graduate</option><option value = "Post-Graduate">Post-Graduate</option><option value = "PhD">PhD</option>'
+let sideBar2 = document.createElement("div");
+sideBar2.innerHTML = '<h3>Job categories</h3><input type = "checkbox" id = "wH" name = "wH" value="warehouse"><lable for = "warehouse">Warehouse</lable></br><input type = "checkbox" id = "iT" name = "iT" value = "IT"><lable for = "IT"> IT</lable></br><input type = "checkbox" id = "LG" name = "Lg" value = "logistic"><lable for ="logistic">Logistic Operation</lable></br><input type = "checkbox" id = "hRm" name = "HRm" value = "hrm"><lable for ="hrm">HRM</lable></br><input type = "checkbox" id = "Tc" name = "teaching" value = "Teaching"><lable for ="Teaching">Teaching</lable></br><input type = "checkbox" id = "Finance" name = "FN" value = "FiNance"><lable for ="FiNance">Finance</lable>';
+sideBar2.style.paddingBottom = '7%';
+
+let subBut = document.createElement("button");
+subBut.innerText = "Submit";
+subBut.style.fontSize = '19px';
+subBut.style.borderRadius = '7px';
+
+subBut.addEventListener('mouseover',function(){
+    subBut.style.backgroundColor = '#424769'
+})
+subBut.addEventListener('mouseout', function(){
+    subBut.style.backgroundColor = '#FFFFFF'
+})
+
+// --------------------------------------------------
+//      Job section
+// --------------------------------------------------
+
+let jobSection = document.createElement("section");
+jobSection.style.paddingLeft = '15%';
+jobSection.style.display = 'flex';
+jobSection.style.flexDirection = 'column';
+jobSection.style.alignContent = 'space-evenly';
+jobSection.style.flexWrap = 'wrap'
+jobSection.style.gap = '13px';
+
+
+jobSection.innerHTML = '<h3>We are offering multiples Jobs & Vacancies here</h3>';
+// section1
+let jobArt = document.createElement("article");
+jobArt.style.borderStyle = 'outset';
+jobArt.style.borderRadius = '8px';
+jobArt.style.padding = '10px';
+let jobHead = document.createElement("div");
+jobHead.style.cursor = 'pointer';
+jobHead.innerHTML = '<a href="#"><a>Support Worker</a></a>'
+let jobBody = document.createElement("div");
+jobBody.innerHTML= "<h5>👜 24/7 Recruitment   📍 Wembaly,London LO4 9SX </h5> <p>We are looking for Support Workers for our homes Supporting 8-18yrs with BESD</p>";
+let jobFooter = document.createElement("div");
+jobFooter.innerHTML = '<footer><button id = "me">View Salary & More Info</button></footer>'
+ //section 2
+ let jobArt1 = document.createElement("article");
+ jobArt1.style.borderStyle = 'outset';
+ jobArt1.style.borderRadius = '8px';
+ jobArt1.style.padding = '10px';
+ let jobHead1 = document.createElement("div");
+ jobHead1.style.cursor = 'pointer';
+ jobHead1.innerHTML = '<a href="#"><a>Support Worker</a></a>'
+ let jobBody1 = document.createElement("div");
+ jobBody1.innerHTML= "<h5>👜 24/7 Recruitment   📍 Wembaly,London LO4 9SX </h5> <p>We are looking for Support Workers for our homes Supporting 8-18yrs with BESD</p>";
+ let jobFooter1 = document.createElement("div");
+ jobFooter1.innerHTML = '<footer><button id = "me">View Salary & More Info</button></footer>'
+ // section 3
+ let jobArt2 = document.createElement("article");
+ jobArt2.style.borderStyle = 'outset';
+ jobArt2.style.borderRadius = '8px';
+ jobArt2.style.padding = '10px';
+ let jobHead2 = document.createElement("div");
+ jobHead2.style.cursor = 'pointer';
+ jobHead2.innerHTML = '<a href="#"><a>Support Worker</a></a>'
+ let jobBody2 = document.createElement("div");
+ jobBody2.innerHTML= "<h5>👜 24/7 Recruitment   📍 Wembaly,London LO4 9SX </h5> <p>We are looking for Support Workers for our homes Supporting 8-18yrs with BESD</p>";
+ let jobFooter2 = document.createElement("div");
+ jobFooter2.innerHTML = '<footer><button id = "me">View Salary & More Info</button></footer>'
+  
+/*
+let jobArt2 = document.createElement("article");
+jobArt2.style.borderStyle = 'outset';
+jobArt2.style.borderRadius = '8px';
+jobArt2.style.padding = '10px';
+let jobHead2 = document.createElement("div");
+jobHead2.style.cursor = 'pointer';
+jobHead2.innerHTML = '<a href="#"><a>Support Worker</a></a>'
+let jobBody2 = document.createElement("div");
+jobBody2.innerHTML= "<h5>👜 24/7 Recruitment   📍 Wembaly,London LO4 9SX </h5> <p>We are looking for Support Workers for our homes Supporting 8-18yrs with BESD</p>";
+let jobFooter2 = document.createElement("div");
+jobFooter2.innerHTML = '<footer><button id = "me">View Salary & More Info</button></footer>'
+ 
+jobSection.appendChild(jobArt2);
+jobArt2.appendChild(jobHead2);
+jobArt2.appendChild(jobBody2);
+jobArt2.appendChild(jobFooter2);
+*/
+
+body.appendChild(navBar);
+body.appendChild(searchSection);
+body.appendChild(allBody)
+allBody.appendChild(sideSection)
+allBody.appendChild(jobSection)
+
+searchSection.appendChild(searchBar);
+searchSection.appendChild(locationBar);
+searchSection.appendChild(searchButton);
+sideBar.appendChild(sideBar0);
+sideBar.appendChild(sideBar1);
+sideBar.appendChild(sideBar2);
+sideBar.appendChild(subBut)
+
+
+// section 1
+
+jobSection.appendChild(jobArt);
+jobArt.appendChild(jobHead);
+jobArt.appendChild(jobBody);
+jobArt.appendChild(jobFooter);
+// section 2
+jobSection.appendChild(jobArt1);
+jobArt1.appendChild(jobHead1);
+jobArt1.appendChild(jobBody1);
+jobArt1.appendChild(jobFooter1);
+// section 3
+jobSection.appendChild(jobArt2);
+jobArt2.appendChild(jobHead2);
+jobArt2.appendChild(jobBody2);
+jobArt2.appendChild(jobFooter2);
+
+
+sideSection.appendChild(sideCard)
+sideCard.appendChild(divSection);
+divSection.appendChild(sideBar)
+    </script>
+
+</body>
+</html>
